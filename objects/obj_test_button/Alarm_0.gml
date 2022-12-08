@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-spd = 6;
-xSpeed = 0;
-ySpeed = 0;
+pushed = false;
+image_index = 0;
