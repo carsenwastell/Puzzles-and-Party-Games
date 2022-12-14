@@ -1,11 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var xDirection = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var jump = keyboard_check(ord("W"));
+var xDirection = keyboard_check(vk_right) - keyboard_check(vk_left);
+var jump = keyboard_check(vk_up);
 var onGround = place_meeting(x, y + 1, obj_test);
 
-if (xDirection != 0) image_xscale = xDirection;
+if (xDirection != 0){
+	sprite_index = spr_player2_walk;
+	image_xscale = xDirection;
+} else {
+	sprite_index = spr_player2;
+}
 
 xSpeed = xDirection * spd;
 ySpeed++;
